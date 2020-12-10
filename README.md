@@ -66,6 +66,10 @@ and ending coordinate pairs, the path of least cost will be illustrated as a ser
 coordinate pairs, with arrows in between each pair illuminating the most cost-efficient
 route of travel.
 
+The way the coordinate system works for both implementations is that the origin (0, 0) is the top
+left tile. As we move to the right, the value of x increases as we move down, the value of y 
+decreases. As an example, when considering the fixed size of 50X50 for the TileMap, the bottom
+right tile is (49, 49) when following this coordinate system.
 
 ### Instructional Video
-See the video [here](http://youtube.com) or visit http://youtube.com.
+See the video [here](https://drive.google.com/file/d/1cYvdS_Z3Wm4lizdKufItFg6NqCxHFqFw/view?usp=sharing) or visit https://drive.google.com/file/d/1cYvdS_Z3Wm4lizdKufItFg6NqCxHFqFw/view?usp=sharing.

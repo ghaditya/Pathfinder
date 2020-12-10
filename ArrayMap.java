@@ -127,7 +127,10 @@ public class ArrayMap {
         }
     }
 
+
     // Origin 0, 0 at top left. X and Y increase as we go down or the right, respectively.
+    // Recursively checks routes by testing movement to each tile systematically until the end tile
+    // is reached, unless the current route being tested is longer than another route. 
     private void traverse(int[][] terrain, int x, int y, int endX, int endY, String soFar, int counter) {
         if (counter <= this.smallestCounter) { // Ensure that routes too long are not considered
             if (x == endX && y == endY) {

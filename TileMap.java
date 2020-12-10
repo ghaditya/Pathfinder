@@ -306,14 +306,22 @@ public class TileMap {
         System.out.println(tileMap.printSquares(map));
         System.out.println(tileMap.printSquaresColor(map));
 
-        System.out.print("Start x: ");
-        int startx = scanner.nextInt();
-        System.out.print("Start y: ");
-        int starty = scanner.nextInt();
-        System.out.print("Start x: ");
-        int endx = scanner.nextInt();
-        System.out.print("Start y: ");
-        int endy = scanner.nextInt();
+        int startx;
+        int starty;
+        int endx;
+        int endy;
+        do {
+            System.out.print("Start x (between 0 & 49): ");
+            startx = scanner.nextInt();
+            System.out.print("Start y (between 0 & 49): ");
+            starty = scanner.nextInt();
+            System.out.print("Start x (between 0 & 49): ");
+            endx = scanner.nextInt();
+            System.out.print("Start y (between 0 & 49): ");
+            endy = scanner.nextInt();
+            System.out.println();
+        } while (startx >= 50 || endx >= 50 || starty >= 50 || endy >= 50 ||
+            startx < 0 || endx < 0 || starty < 0 || endy < 0);
 
         Path p = tileMap.pathfind(map[startx][starty], map[endx][endy]);
         System.out.println(p);
